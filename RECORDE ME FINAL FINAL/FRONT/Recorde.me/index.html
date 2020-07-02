@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Recorde.me</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Eterna - v2.1.0
+  * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><span>Recorde.me</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Criar lembrete</a></li>
+          <li><a href="#lembrete">Lembretes</a></li>
+
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background: url(assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="carousel-content">
+              <h2 class="animate__animated animate__fadeInDown">Bem-vindo ao<br><span>Recorde.me</span></h2>
+              <p class="animate__animated animate__fadeInUp">Site feito para você não se esquecer de seus
+                compromissos.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <p class="font-italic">
+              Essa página foi criada com o intuito de ajudar pessoas que têm dificuldade em se lembrar de suas tarefas.
+              Sendo assim, você poderá:
+            </p>
+
+            <ul>
+              <li><i class="icofont-check-circled"></i> Criar lembretes.</li>
+              <li><i class="icofont-check-circled"></i> Visualizar os lembretes cadastrados.</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Criar lembrete</h2>
+        </div>
+
+        <div class="container">
+          <section class="form">
+            <form id="cadastro" action="javascript:enviarForm()" method="post" role="form" class="cadastro-form"
+              novalidate> <!-- faz a validação do formulário-->
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Título" required /> <!-- o required obriga que seja inserido algo no input-->
+                  <div class="invalid-feedback">
+                    Por favor, informe um título válido.
+                  </div>
+                </div>
+
+
+                <div class="form-group col-md-6">
+                  <input type="date" name="data" class="form-control" id="data" placeholder="Data" required />
+                  <div class="invalid-feedback">
+                    Por favor, informe uma data válida.
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <textarea type="text" name="lembrete" class="form-control" id="lembrete" placeholder="Lembrete"
+                    required></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, informe um texto válido.
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center"><button onclick="mostrar()" type="submit">Enviar</button></div>
+
+            </form>
+          </section>
+        </div>
+
+        <div id="lembrete" class="lembrete">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Lembretes</h2>
+          </div>
+
+          <table class="table table-hover" id="tabela">
+
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Data</th>
+              <th scope="col">Lembrete</th>
+            </tr>
+
+          </table>
+        </div>
+
+      </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="js/requisicao.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
